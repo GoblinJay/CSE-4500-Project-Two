@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Windows Debug",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "maui-windows",
+            "program": "${workspaceFolder}/MyPaintPicker/bin/Debug/net8.0-windows10.0.19041.0/win10-x64/MyPaintPicker.dll",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole"
+        },
+        {
+            "name": "Android Debug",
+            "type": "xamarin-android",
+            "request": "launch",
+            "preLaunchTask": "maui-android",
+            "applicationID": "com.companyname.mypaintpicker",
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+} 

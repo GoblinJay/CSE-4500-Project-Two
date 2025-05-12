@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyPaintPicker.MainPage"
+             BackgroundColor="#E39D64">
+
+    <Grid x:Name="Container">
+        <Frame Margin="20,0" VerticalOptions="Center" BackgroundColor="White" CornerRadius="10">
+            <VerticalStackLayout Spacing="15" Padding="10">
+                <Label 
+                    Text="Jay's Paint Picker"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    TextColor="Black" />
+                
+                <!-- Red Slider -->
+                <Label Text="Red Value:" TextColor="Black" />
+                <Slider x:Name="sliderRed" 
+                        Minimum="0" 
+                        Maximum="255" 
+                        Value="233"
+                        ValueChanged="slider_ValueChanged" 
+                        ThumbColor="Red"
+                        MinimumTrackColor="LightGray"
+                        MaximumTrackColor="LightGray"/>
+                
+                <!-- Green Slider -->
+                <Label Text="Green Value:" TextColor="Black" />
+                <Slider x:Name="sliderGreen" 
+                        Minimum="0" 
+                        Maximum="255" 
+                        Value="157" 
+                        ValueChanged="slider_ValueChanged"
+                        ThumbColor="Red"
+                        MinimumTrackColor="LightGray"
+                        MaximumTrackColor="LightGray"/>
+                
+                <!-- Blue Slider -->
+                <Label Text="Blue Value:" TextColor="Black" />
+                <Slider x:Name="sliderBlue" 
+                        Minimum="0" 
+                        Maximum="255" 
+                        Value="100" 
+                        ValueChanged="slider_ValueChanged"
+                        ThumbColor="Red"
+                        MinimumTrackColor="LightGray"
+                        MaximumTrackColor="LightGray"/>
+                
+                <!-- Hex Code Display -->
+                <Frame CornerRadius="20" Padding="15,5" HorizontalOptions="Center" BorderColor="LightGray" BackgroundColor="White" HasShadow="True">
+                    <HorizontalStackLayout Spacing="10">
+                        <Label x:Name="hexLabel" Text="#E99D64" VerticalOptions="Center" TextColor="Black"/>
+                        <Button Text="📋" 
+                                x:Name="btnCopy"
+                                HeightRequest="30" 
+                                WidthRequest="30" 
+                                CornerRadius="15"
+                                Padding="0"
+                                FontSize="14"
+                                BackgroundColor="Transparent"
+                                TextColor="Black"
+                                Clicked="btnCopy_Clicked"
+                                VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+                </Frame>
+                
+                <!-- Random Color Button -->
+                <Button x:Name="btnRandom" 
+                        Text="Generate Random Color" 
+                        Clicked="btnRandom_Clicked"
+                        BackgroundColor="#E39D64" 
+                        TextColor="White"
+                        CornerRadius="5"/>
+            </VerticalStackLayout>
+        </Frame>
+    </Grid>
+
+</ContentPage>
